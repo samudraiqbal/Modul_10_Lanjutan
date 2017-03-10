@@ -1,7 +1,7 @@
 ## Modul_10_Lanjutan
 #### Nama : Muhamad Iqbal Samudra<br>Kelas : XI RPL 5<br>Absen : 20
 
-## Screenshot Aplikasi
+## Screenshot
 Sign Up | Sign In
 ------------ | -------------
 <img src="https://cloud.githubusercontent.com/assets/21413338/23803442/2b24287e-05e9-11e7-8f9c-5b2c1e528743.PNG"/>|<img src="https://cloud.githubusercontent.com/assets/21413338/23803444/2b27bb38-05e9-11e7-9231-668168428b5f.PNG"/>
