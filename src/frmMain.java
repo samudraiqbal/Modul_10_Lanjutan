@@ -284,20 +284,32 @@ public class frmMain extends javax.swing.JFrame {
         // TODO add your handling code here:
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal = dateFormat.format(Tanggal.getDate());
-        if ("".equals(txtNIS.getText()) ||
-            "".equals(txtNama.getText()) ||
-            "".equals(txtTempatLahir.getText()) ||
-            "".equals(txtKelas.getText()) ||
-            "".equals(txtAlamat.getText()) ||
-            "".equals(txtEmail.getText())) {
-            JOptionPane.showMessageDialog(this, "Harap Lengkapi Data", "Error", JOptionPane.WARNING_MESSAGE);    
-        }else{
-            String JK = "";
-            if (rdLaki.isSelected()) {
-                JK = "L";
-            }else{
-                JK = "P";
-            }
+        String JK = "";
+       
+        String nis = txtNIS.getText();
+        String nama = txtNama.getText();
+        String tl = txtTempatLahir.getText();
+        String kelas = txtKelas.getText();
+        String email = txtEmail.getText();
+        String alamat = txtAlamat.getText();
+        
+        if (rdLaki.isSelected()) {
+            JK = "L";
+        } else {
+            JK = "P";
+        }
+        if (txtNIS.getText().equals("") || 
+           txtNama.getText().equals("") ||
+           txtTempatLahir.getText().equals("") ||
+           tanggal.equals("") ||
+           JK.equals("") ||
+           txtKelas.getText().equals("")||
+           txtEmail.getText().equals("") ||
+           txtAlamat.getText().equals("")){
+            
+            JOptionPane.showMessageDialog(this, "Harap Lengkai Data", "Error",
+                    JOptionPane.WARNING_MESSAGE);
+        }else{            
             String SQL ="INSERT INTO t_siswa (NIS,NamaSiswa,TempatLahir,TanggalLahir,JenisKelamin,Kelas,Email,Alamat)" 
                     + "VALUES('"
                     +txtNIS.getText()+"','"
@@ -342,6 +354,7 @@ public class frmMain extends javax.swing.JFrame {
         txtNama.setText("");
         txtNIS.setText("");
         txtKelas.setText("");
+        txtTempatLahir.setText("");
         buttonGroup1.clearSelection();
         txtEmail.setText("");
         txtAlamat.setText("");
